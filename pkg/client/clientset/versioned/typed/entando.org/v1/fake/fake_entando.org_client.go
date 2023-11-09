@@ -36,6 +36,10 @@ func (c *FakeEntandoV1) EntandoDeBundles(namespace string) v1.EntandoDeBundleInt
 	return &FakeEntandoDeBundles{c, namespace}
 }
 
+func (c *FakeEntandoV1) EntandoPlugins(namespace string) v1.EntandoPluginInterface {
+	return &FakeEntandoPlugins{c, namespace}
+}
+
 // RESTClient returns a RESTClient that is used to communicate
 // with API server by this client implementation.
 func (c *FakeEntandoV1) RESTClient() rest.Interface {

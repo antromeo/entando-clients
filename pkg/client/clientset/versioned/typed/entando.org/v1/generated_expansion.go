@@ -21,3 +21,5 @@ package v1
 type EntandoAppExpansion interface{}
 
 type EntandoDeBundleExpansion interface{}
+
+type EntandoPluginExpansion interface{}

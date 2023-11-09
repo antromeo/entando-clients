@@ -47,10 +47,20 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 		return &entandoorgv1.EntandoDeBundleSpecApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("EntandoDeBundleStatus"):
 		return &entandoorgv1.EntandoDeBundleStatusApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("EntandoPlugin"):
+		return &entandoorgv1.EntandoPluginApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("EntandoPluginSpec"):
+		return &entandoorgv1.EntandoPluginSpecApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("EntandoPluginStatus"):
+		return &entandoorgv1.EntandoPluginStatusApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("KeycloakSpec"):
 		return &entandoorgv1.KeycloakSpecApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("Permission"):
+		return &entandoorgv1.PermissionApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("ResourceRequirement"):
 		return &entandoorgv1.ResourceRequirementApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("Role"):
+		return &entandoorgv1.RoleApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("TagsSpec"):
 		return &entandoorgv1.TagsSpecApplyConfiguration{}
 

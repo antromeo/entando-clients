@@ -33,3 +33,11 @@ type EntandoDeBundleListerExpansion interface{}
 // EntandoDeBundleNamespaceListerExpansion allows custom methods to be added to
 // EntandoDeBundleNamespaceLister.
 type EntandoDeBundleNamespaceListerExpansion interface{}
+
+// EntandoPluginListerExpansion allows custom methods to be added to
+// EntandoPluginLister.
+type EntandoPluginListerExpansion interface{}
+
+// EntandoPluginNamespaceListerExpansion allows custom methods to be added to
+// EntandoPluginNamespaceLister.
+type EntandoPluginNamespaceListerExpansion interface{}

@@ -28,6 +28,8 @@ type Interface interface {
 	EntandoApps() EntandoAppInformer
 	// EntandoDeBundles returns a EntandoDeBundleInformer.
 	EntandoDeBundles() EntandoDeBundleInformer
+	// EntandoPlugins returns a EntandoPluginInformer.
+	EntandoPlugins() EntandoPluginInformer
 }
 
 type version struct {
@@ -49,4 +51,9 @@ func (v *version) EntandoApps() EntandoAppInformer {
 // EntandoDeBundles returns a EntandoDeBundleInformer.
 func (v *version) EntandoDeBundles() EntandoDeBundleInformer {
 	return &entandoDeBundleInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
+}
+
+// EntandoPlugins returns a EntandoPluginInformer.
+func (v *version) EntandoPlugins() EntandoPluginInformer {
+	return &entandoPluginInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
 }
