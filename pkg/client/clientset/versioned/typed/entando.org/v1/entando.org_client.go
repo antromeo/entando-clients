@@ -29,6 +29,7 @@ import (
 type EntandoV1Interface interface {
 	RESTClient() rest.Interface
 	EntandoAppsGetter
+	EntandoDeBundlesGetter
 }
 
 // EntandoV1Client is used to interact with features provided by the entando.org group.
@@ -38,6 +39,10 @@ type EntandoV1Client struct {
 
 func (c *EntandoV1Client) EntandoApps(namespace string) EntandoAppInterface {
 	return newEntandoApps(c, namespace)
+}
+
+func (c *EntandoV1Client) EntandoDeBundles(namespace string) EntandoDeBundleInterface {
+	return newEntandoDeBundles(c, namespace)
 }
 
 // NewForConfig creates a new EntandoV1Client for the given config.

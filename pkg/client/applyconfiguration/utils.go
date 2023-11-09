@@ -31,16 +31,28 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	// Group=entando.org, Version=v1
 	case v1.SchemeGroupVersion.WithKind("BackupGitSpecification"):
 		return &entandoorgv1.BackupGitSpecificationApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("DetailSpec"):
+		return &entandoorgv1.DetailSpecApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("DistTag"):
+		return &entandoorgv1.DistTagApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("EntandoApp"):
 		return &entandoorgv1.EntandoAppApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("EntandoAppSpec"):
 		return &entandoorgv1.EntandoAppSpecApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("EntandoAppStatus"):
 		return &entandoorgv1.EntandoAppStatusApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("EntandoDeBundle"):
+		return &entandoorgv1.EntandoDeBundleApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("EntandoDeBundleSpec"):
+		return &entandoorgv1.EntandoDeBundleSpecApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("EntandoDeBundleStatus"):
+		return &entandoorgv1.EntandoDeBundleStatusApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("KeycloakSpec"):
 		return &entandoorgv1.KeycloakSpecApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("ResourceRequirement"):
 		return &entandoorgv1.ResourceRequirementApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("TagsSpec"):
+		return &entandoorgv1.TagsSpecApplyConfiguration{}
 
 	}
 	return nil

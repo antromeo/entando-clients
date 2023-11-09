@@ -26,6 +26,8 @@ import (
 type Interface interface {
 	// EntandoApps returns a EntandoAppInformer.
 	EntandoApps() EntandoAppInformer
+	// EntandoDeBundles returns a EntandoDeBundleInformer.
+	EntandoDeBundles() EntandoDeBundleInformer
 }
 
 type version struct {
@@ -42,4 +44,9 @@ func New(f internalinterfaces.SharedInformerFactory, namespace string, tweakList
 // EntandoApps returns a EntandoAppInformer.
 func (v *version) EntandoApps() EntandoAppInformer {
 	return &entandoAppInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
+}
+
+// EntandoDeBundles returns a EntandoDeBundleInformer.
+func (v *version) EntandoDeBundles() EntandoDeBundleInformer {
+	return &entandoDeBundleInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
 }
