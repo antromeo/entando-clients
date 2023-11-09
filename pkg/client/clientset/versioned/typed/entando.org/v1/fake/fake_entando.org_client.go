@@ -32,6 +32,10 @@ func (c *FakeEntandoV1) EntandoApps(namespace string) v1.EntandoAppInterface {
 	return &FakeEntandoApps{c, namespace}
 }
 
+func (c *FakeEntandoV1) EntandoAppPluginLinks(namespace string) v1.EntandoAppPluginLinkInterface {
+	return &FakeEntandoAppPluginLinks{c, namespace}
+}
+
 func (c *FakeEntandoV1) EntandoDeBundles(namespace string) v1.EntandoDeBundleInterface {
 	return &FakeEntandoDeBundles{c, namespace}
 }

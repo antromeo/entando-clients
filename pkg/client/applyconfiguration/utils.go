@@ -37,6 +37,12 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 		return &entandoorgv1.DistTagApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("EntandoApp"):
 		return &entandoorgv1.EntandoAppApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("EntandoAppPluginLink"):
+		return &entandoorgv1.EntandoAppPluginLinkApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("EntandoAppPluginLinkSpec"):
+		return &entandoorgv1.EntandoAppPluginLinkSpecApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("EntandoAppPluginLinkStatus"):
+		return &entandoorgv1.EntandoAppPluginLinkStatusApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("EntandoAppSpec"):
 		return &entandoorgv1.EntandoAppSpecApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("EntandoAppStatus"):
