@@ -47,6 +47,12 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 		return &entandoorgv1.EntandoAppSpecApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("EntandoAppStatus"):
 		return &entandoorgv1.EntandoAppStatusApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("EntandoDatabaseService"):
+		return &entandoorgv1.EntandoDatabaseServiceApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("EntandoDatabaseServiceSpec"):
+		return &entandoorgv1.EntandoDatabaseServiceSpecApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("EntandoDatabaseServiceStatus"):
+		return &entandoorgv1.EntandoDatabaseServiceStatusApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("EntandoDeBundle"):
 		return &entandoorgv1.EntandoDeBundleApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("EntandoDeBundleSpec"):

@@ -28,6 +28,8 @@ type Interface interface {
 	EntandoApps() EntandoAppInformer
 	// EntandoAppPluginLinks returns a EntandoAppPluginLinkInformer.
 	EntandoAppPluginLinks() EntandoAppPluginLinkInformer
+	// EntandoDatabaseServices returns a EntandoDatabaseServiceInformer.
+	EntandoDatabaseServices() EntandoDatabaseServiceInformer
 	// EntandoDeBundles returns a EntandoDeBundleInformer.
 	EntandoDeBundles() EntandoDeBundleInformer
 	// EntandoPlugins returns a EntandoPluginInformer.
@@ -53,6 +55,11 @@ func (v *version) EntandoApps() EntandoAppInformer {
 // EntandoAppPluginLinks returns a EntandoAppPluginLinkInformer.
 func (v *version) EntandoAppPluginLinks() EntandoAppPluginLinkInformer {
 	return &entandoAppPluginLinkInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
+}
+
+// EntandoDatabaseServices returns a EntandoDatabaseServiceInformer.
+func (v *version) EntandoDatabaseServices() EntandoDatabaseServiceInformer {
+	return &entandoDatabaseServiceInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
 }
 
 // EntandoDeBundles returns a EntandoDeBundleInformer.

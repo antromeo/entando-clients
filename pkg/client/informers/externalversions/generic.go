@@ -57,6 +57,8 @@ func (f *sharedInformerFactory) ForResource(resource schema.GroupVersionResource
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Entando().V1().EntandoApps().Informer()}, nil
 	case v1.SchemeGroupVersion.WithResource("entandoapppluginlinks"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Entando().V1().EntandoAppPluginLinks().Informer()}, nil
+	case v1.SchemeGroupVersion.WithResource("entandodatabaseservices"):
+		return &genericInformer{resource: resource.GroupResource(), informer: f.Entando().V1().EntandoDatabaseServices().Informer()}, nil
 	case v1.SchemeGroupVersion.WithResource("entandodebundles"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Entando().V1().EntandoDeBundles().Informer()}, nil
 	case v1.SchemeGroupVersion.WithResource("entandoplugins"):

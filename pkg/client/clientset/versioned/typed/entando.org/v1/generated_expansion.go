@@ -22,6 +22,8 @@ type EntandoAppExpansion interface{}
 
 type EntandoAppPluginLinkExpansion interface{}
 
+type EntandoDatabaseServiceExpansion interface{}
+
 type EntandoDeBundleExpansion interface{}
 
 type EntandoPluginExpansion interface{}

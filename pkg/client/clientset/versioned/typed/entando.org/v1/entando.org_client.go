@@ -30,6 +30,7 @@ type EntandoV1Interface interface {
 	RESTClient() rest.Interface
 	EntandoAppsGetter
 	EntandoAppPluginLinksGetter
+	EntandoDatabaseServicesGetter
 	EntandoDeBundlesGetter
 	EntandoPluginsGetter
 }
@@ -45,6 +46,10 @@ func (c *EntandoV1Client) EntandoApps(namespace string) EntandoAppInterface {
 
 func (c *EntandoV1Client) EntandoAppPluginLinks(namespace string) EntandoAppPluginLinkInterface {
 	return newEntandoAppPluginLinks(c, namespace)
+}
+
+func (c *EntandoV1Client) EntandoDatabaseServices(namespace string) EntandoDatabaseServiceInterface {
+	return newEntandoDatabaseServices(c, namespace)
 }
 
 func (c *EntandoV1Client) EntandoDeBundles(namespace string) EntandoDeBundleInterface {

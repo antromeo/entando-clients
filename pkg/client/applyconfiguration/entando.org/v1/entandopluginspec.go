@@ -33,7 +33,7 @@ type EntandoPluginSpecApplyConfiguration struct {
 	IngressHostName      *string                                `json:"ingressHostName,omitempty"`
 	IngressPath          *string                                `json:"ingressPath,omitempty"`
 	TlsSecretName        *string                                `json:"tlsSecretName,omitempty"`
-	ServiceAccountToUse  *string                                `json:"tlsSecretName,omitempty"`
+	ServiceAccountToUse  *string                                `json:"serviceAccountToUse,omitempty"`
 	EnvironmentVariables []v1.EnvVar                            `json:"environmentVariables,omitempty"`
 	ResourceRequirements *ResourceRequirementApplyConfiguration `json:"resourceRequirements,omitempty"`
 	KeycloakToUse        *KeycloakSpecApplyConfiguration        `json:"keycloakToUse,omitempty"`

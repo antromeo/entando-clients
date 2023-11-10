@@ -34,6 +34,14 @@ type EntandoAppPluginLinkListerExpansion interface{}
 // EntandoAppPluginLinkNamespaceLister.
 type EntandoAppPluginLinkNamespaceListerExpansion interface{}
 
+// EntandoDatabaseServiceListerExpansion allows custom methods to be added to
+// EntandoDatabaseServiceLister.
+type EntandoDatabaseServiceListerExpansion interface{}
+
+// EntandoDatabaseServiceNamespaceListerExpansion allows custom methods to be added to
+// EntandoDatabaseServiceNamespaceLister.
+type EntandoDatabaseServiceNamespaceListerExpansion interface{}
+
 // EntandoDeBundleListerExpansion allows custom methods to be added to
 // EntandoDeBundleLister.
 type EntandoDeBundleListerExpansion interface{}
