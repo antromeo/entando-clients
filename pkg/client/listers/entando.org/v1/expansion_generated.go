@@ -50,6 +50,14 @@ type EntandoDeBundleListerExpansion interface{}
 // EntandoDeBundleNamespaceLister.
 type EntandoDeBundleNamespaceListerExpansion interface{}
 
+// EntandoKeycloakServerListerExpansion allows custom methods to be added to
+// EntandoKeycloakServerLister.
+type EntandoKeycloakServerListerExpansion interface{}
+
+// EntandoKeycloakServerNamespaceListerExpansion allows custom methods to be added to
+// EntandoKeycloakServerNamespaceLister.
+type EntandoKeycloakServerNamespaceListerExpansion interface{}
+
 // EntandoPluginListerExpansion allows custom methods to be added to
 // EntandoPluginLister.
 type EntandoPluginListerExpansion interface{}

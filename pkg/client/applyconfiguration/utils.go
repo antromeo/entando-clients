@@ -59,6 +59,12 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 		return &entandoorgv1.EntandoDeBundleSpecApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("EntandoDeBundleStatus"):
 		return &entandoorgv1.EntandoDeBundleStatusApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("EntandoKeycloakServer"):
+		return &entandoorgv1.EntandoKeycloakServerApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("EntandoKeycloakServerSpec"):
+		return &entandoorgv1.EntandoKeycloakServerSpecApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("EntandoKeycloakServerStatus"):
+		return &entandoorgv1.EntandoKeycloakServerStatusApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("EntandoPlugin"):
 		return &entandoorgv1.EntandoPluginApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("EntandoPluginSpec"):

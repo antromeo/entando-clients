@@ -23,7 +23,7 @@ type EntandoDatabaseServiceSpec struct {
 	ResourceRequirements ResourceRequirement `json:"resourceRequirements,omitempty"`
 }
 
-type JdbcParameters interface {
+type JdbcParameters struct {
 }
 
 type EntandoDatabaseServiceStatus struct {

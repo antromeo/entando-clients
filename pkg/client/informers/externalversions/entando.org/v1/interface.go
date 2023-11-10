@@ -32,6 +32,8 @@ type Interface interface {
 	EntandoDatabaseServices() EntandoDatabaseServiceInformer
 	// EntandoDeBundles returns a EntandoDeBundleInformer.
 	EntandoDeBundles() EntandoDeBundleInformer
+	// EntandoKeycloakServers returns a EntandoKeycloakServerInformer.
+	EntandoKeycloakServers() EntandoKeycloakServerInformer
 	// EntandoPlugins returns a EntandoPluginInformer.
 	EntandoPlugins() EntandoPluginInformer
 }
@@ -65,6 +67,11 @@ func (v *version) EntandoDatabaseServices() EntandoDatabaseServiceInformer {
 // EntandoDeBundles returns a EntandoDeBundleInformer.
 func (v *version) EntandoDeBundles() EntandoDeBundleInformer {
 	return &entandoDeBundleInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
+}
+
+// EntandoKeycloakServers returns a EntandoKeycloakServerInformer.
+func (v *version) EntandoKeycloakServers() EntandoKeycloakServerInformer {
+	return &entandoKeycloakServerInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
 }
 
 // EntandoPlugins returns a EntandoPluginInformer.

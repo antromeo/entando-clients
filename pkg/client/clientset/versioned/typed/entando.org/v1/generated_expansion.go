@@ -26,4 +26,6 @@ type EntandoDatabaseServiceExpansion interface{}
 
 type EntandoDeBundleExpansion interface{}
 
+type EntandoKeycloakServerExpansion interface{}
+
 type EntandoPluginExpansion interface{}

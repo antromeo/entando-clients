@@ -44,6 +44,10 @@ func (c *FakeEntandoV1) EntandoDeBundles(namespace string) v1.EntandoDeBundleInt
 	return &FakeEntandoDeBundles{c, namespace}
 }
 
+func (c *FakeEntandoV1) EntandoKeycloakServers(namespace string) v1.EntandoKeycloakServerInterface {
+	return &FakeEntandoKeycloakServers{c, namespace}
+}
+
 func (c *FakeEntandoV1) EntandoPlugins(namespace string) v1.EntandoPluginInterface {
 	return &FakeEntandoPlugins{c, namespace}
 }

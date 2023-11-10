@@ -32,6 +32,7 @@ type EntandoV1Interface interface {
 	EntandoAppPluginLinksGetter
 	EntandoDatabaseServicesGetter
 	EntandoDeBundlesGetter
+	EntandoKeycloakServersGetter
 	EntandoPluginsGetter
 }
 
@@ -54,6 +55,10 @@ func (c *EntandoV1Client) EntandoDatabaseServices(namespace string) EntandoDatab
 
 func (c *EntandoV1Client) EntandoDeBundles(namespace string) EntandoDeBundleInterface {
 	return newEntandoDeBundles(c, namespace)
+}
+
+func (c *EntandoV1Client) EntandoKeycloakServers(namespace string) EntandoKeycloakServerInterface {
+	return newEntandoKeycloakServers(c, namespace)
 }
 
 func (c *EntandoV1Client) EntandoPlugins(namespace string) EntandoPluginInterface {
