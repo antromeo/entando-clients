@@ -19,7 +19,8 @@ limitations under the License.
 package v1
 
 import (
-	v1 "k8s.io/api/core/v1"
+	v1 "github.com/antromeo/entando-clients/pkg/apis/entando.org/v1"
+	corev1 "k8s.io/api/core/v1"
 )
 
 // EntandoDatabaseServiceSpecApplyConfiguration represents an declarative configuration of the EntandoDatabaseServiceSpec type for use
@@ -31,12 +32,12 @@ type EntandoDatabaseServiceSpecApplyConfiguration struct {
 	CreateDeployment     *bool                                  `json:"createDeployment,omitempty"`
 	Host                 *string                                `json:"host,omitempty"`
 	Port                 *int                                   `json:"port,omitempty"`
-	Database             *int                                   `json:"database,omitempty"`
-	TableSpace           *int                                   `json:"tableSpace,omitempty"`
-	SecretName           *int                                   `json:"secretName,omitempty"`
-	JdbcParameters       *int                                   `json:"jdbcParameters,omitempty"`
-	ServiceAccountToUse  *int                                   `json:"serviceAccountToUse,omitempty"`
-	EnvironmentVariables []v1.EnvVar                            `json:"environmentVariables,omitempty"`
+	Database             *string                                `json:"database,omitempty"`
+	TableSpace           *string                                `json:"tableSpace,omitempty"`
+	SecretName           *string                                `json:"secretName,omitempty"`
+	JdbcParameters       *v1.JdbcParameters                     `json:"jdbcParameters,omitempty"`
+	ServiceAccountToUse  *string                                `json:"serviceAccountToUse,omitempty"`
+	EnvironmentVariables []corev1.EnvVar                        `json:"environmentVariables,omitempty"`
 	ResourceRequirements *ResourceRequirementApplyConfiguration `json:"resourceRequirements,omitempty"`
 }
 
@@ -97,7 +98,7 @@ func (b *EntandoDatabaseServiceSpecApplyConfiguration) WithPort(value int) *Enta
 // WithDatabase sets the Database field in the declarative configuration to the given value
 // and returns the receiver, so that objects can be built by chaining "With" function invocations.
 // If called multiple times, the Database field is set to the value of the last call.
-func (b *EntandoDatabaseServiceSpecApplyConfiguration) WithDatabase(value int) *EntandoDatabaseServiceSpecApplyConfiguration {
+func (b *EntandoDatabaseServiceSpecApplyConfiguration) WithDatabase(value string) *EntandoDatabaseServiceSpecApplyConfiguration {
 	b.Database = &value
 	return b
 }
@@ -105,7 +106,7 @@ func (b *EntandoDatabaseServiceSpecApplyConfiguration) WithDatabase(value int) *
 // WithTableSpace sets the TableSpace field in the declarative configuration to the given value
 // and returns the receiver, so that objects can be built by chaining "With" function invocations.
 // If called multiple times, the TableSpace field is set to the value of the last call.
-func (b *EntandoDatabaseServiceSpecApplyConfiguration) WithTableSpace(value int) *EntandoDatabaseServiceSpecApplyConfiguration {
+func (b *EntandoDatabaseServiceSpecApplyConfiguration) WithTableSpace(value string) *EntandoDatabaseServiceSpecApplyConfiguration {
 	b.TableSpace = &value
 	return b
 }
@@ -113,7 +114,7 @@ func (b *EntandoDatabaseServiceSpecApplyConfiguration) WithTableSpace(value int)
 // WithSecretName sets the SecretName field in the declarative configuration to the given value
 // and returns the receiver, so that objects can be built by chaining "With" function invocations.
 // If called multiple times, the SecretName field is set to the value of the last call.
-func (b *EntandoDatabaseServiceSpecApplyConfiguration) WithSecretName(value int) *EntandoDatabaseServiceSpecApplyConfiguration {
+func (b *EntandoDatabaseServiceSpecApplyConfiguration) WithSecretName(value string) *EntandoDatabaseServiceSpecApplyConfiguration {
 	b.SecretName = &value
 	return b
 }
@@ -121,7 +122,7 @@ func (b *EntandoDatabaseServiceSpecApplyConfiguration) WithSecretName(value int)
 // WithJdbcParameters sets the JdbcParameters field in the declarative configuration to the given value
 // and returns the receiver, so that objects can be built by chaining "With" function invocations.
 // If called multiple times, the JdbcParameters field is set to the value of the last call.
-func (b *EntandoDatabaseServiceSpecApplyConfiguration) WithJdbcParameters(value int) *EntandoDatabaseServiceSpecApplyConfiguration {
+func (b *EntandoDatabaseServiceSpecApplyConfiguration) WithJdbcParameters(value v1.JdbcParameters) *EntandoDatabaseServiceSpecApplyConfiguration {
 	b.JdbcParameters = &value
 	return b
 }
@@ -129,7 +130,7 @@ func (b *EntandoDatabaseServiceSpecApplyConfiguration) WithJdbcParameters(value 
 // WithServiceAccountToUse sets the ServiceAccountToUse field in the declarative configuration to the given value
 // and returns the receiver, so that objects can be built by chaining "With" function invocations.
 // If called multiple times, the ServiceAccountToUse field is set to the value of the last call.
-func (b *EntandoDatabaseServiceSpecApplyConfiguration) WithServiceAccountToUse(value int) *EntandoDatabaseServiceSpecApplyConfiguration {
+func (b *EntandoDatabaseServiceSpecApplyConfiguration) WithServiceAccountToUse(value string) *EntandoDatabaseServiceSpecApplyConfiguration {
 	b.ServiceAccountToUse = &value
 	return b
 }
@@ -137,7 +138,7 @@ func (b *EntandoDatabaseServiceSpecApplyConfiguration) WithServiceAccountToUse(v
 // WithEnvironmentVariables adds the given value to the EnvironmentVariables field in the declarative configuration
 // and returns the receiver, so that objects can be build by chaining "With" function invocations.
 // If called multiple times, values provided by each call will be appended to the EnvironmentVariables field.
-func (b *EntandoDatabaseServiceSpecApplyConfiguration) WithEnvironmentVariables(values ...v1.EnvVar) *EntandoDatabaseServiceSpecApplyConfiguration {
+func (b *EntandoDatabaseServiceSpecApplyConfiguration) WithEnvironmentVariables(values ...corev1.EnvVar) *EntandoDatabaseServiceSpecApplyConfiguration {
 	for i := range values {
 		b.EnvironmentVariables = append(b.EnvironmentVariables, values[i])
 	}

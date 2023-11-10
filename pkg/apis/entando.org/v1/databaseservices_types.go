@@ -6,17 +6,17 @@ import (
 )
 
 type EntandoDatabaseServiceSpec struct {
-	Replicas            int    `json:"replicas"`
-	Dbms                string `json:"dbms"`
-	StorageClass        string `json:"storageClass"`
-	CreateDeployment    bool   `json:"createDeployment"`
-	Host                string `json:"host"`
-	Port                int    `json:"port"`
-	Database            int    `json:"database"`
-	TableSpace          int    `json:"tableSpace"`
-	SecretName          int    `json:"secretName"`
-	JdbcParameters      int    `json:"jdbcParameters"`
-	ServiceAccountToUse int    `json:"serviceAccountToUse"`
+	Replicas            int            `json:"replicas"`
+	Dbms                string         `json:"dbms"`
+	StorageClass        string         `json:"storageClass"`
+	CreateDeployment    bool           `json:"createDeployment"`
+	Host                string         `json:"host"`
+	Port                int            `json:"port"`
+	Database            string         `json:"database"`
+	TableSpace          string         `json:"tableSpace"`
+	SecretName          string         `json:"secretName"`
+	JdbcParameters      JdbcParameters `json:"jdbcParameters"`
+	ServiceAccountToUse string         `json:"serviceAccountToUse"`
 	// +optional
 	EnvironmentVariables []v1.EnvVar `json:"environmentVariables,omitempty"`
 	// +optional
