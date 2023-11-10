@@ -15,7 +15,7 @@ type EntandoPluginSpec struct {
 	IngressHostName     string `json:"ingressHostName"`
 	IngressPath         string `json:"ingressPath"`
 	TlsSecretName       string `json:"tlsSecretName"`
-	ServiceAccountToUse string `json:"tlsSecretName"`
+	ServiceAccountToUse string `json:"serviceAccountToUse"`
 	// +optional
 	EnvironmentVariables []v1.EnvVar `json:"environmentVariables,omitempty"`
 	// +optional
