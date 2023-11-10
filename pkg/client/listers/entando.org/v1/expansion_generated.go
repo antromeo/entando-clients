@@ -65,3 +65,11 @@ type EntandoPluginListerExpansion interface{}
 // EntandoPluginNamespaceListerExpansion allows custom methods to be added to
 // EntandoPluginNamespaceLister.
 type EntandoPluginNamespaceListerExpansion interface{}
+
+// ProvidedCapabilityListerExpansion allows custom methods to be added to
+// ProvidedCapabilityLister.
+type ProvidedCapabilityListerExpansion interface{}
+
+// ProvidedCapabilityNamespaceListerExpansion allows custom methods to be added to
+// ProvidedCapabilityNamespaceLister.
+type ProvidedCapabilityNamespaceListerExpansion interface{}

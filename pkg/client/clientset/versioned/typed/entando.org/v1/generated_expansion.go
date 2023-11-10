@@ -29,3 +29,5 @@ type EntandoDeBundleExpansion interface{}
 type EntandoKeycloakServerExpansion interface{}
 
 type EntandoPluginExpansion interface{}
+
+type ProvidedCapabilityExpansion interface{}

@@ -36,6 +36,8 @@ type Interface interface {
 	EntandoKeycloakServers() EntandoKeycloakServerInformer
 	// EntandoPlugins returns a EntandoPluginInformer.
 	EntandoPlugins() EntandoPluginInformer
+	// ProvidedCapabilities returns a ProvidedCapabilityInformer.
+	ProvidedCapabilities() ProvidedCapabilityInformer
 }
 
 type version struct {
@@ -77,4 +79,9 @@ func (v *version) EntandoKeycloakServers() EntandoKeycloakServerInformer {
 // EntandoPlugins returns a EntandoPluginInformer.
 func (v *version) EntandoPlugins() EntandoPluginInformer {
 	return &entandoPluginInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
+}
+
+// ProvidedCapabilities returns a ProvidedCapabilityInformer.
+func (v *version) ProvidedCapabilities() ProvidedCapabilityInformer {
+	return &providedCapabilityInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
 }

@@ -34,6 +34,7 @@ type EntandoV1Interface interface {
 	EntandoDeBundlesGetter
 	EntandoKeycloakServersGetter
 	EntandoPluginsGetter
+	ProvidedCapabilitiesGetter
 }
 
 // EntandoV1Client is used to interact with features provided by the entando.org group.
@@ -63,6 +64,10 @@ func (c *EntandoV1Client) EntandoKeycloakServers(namespace string) EntandoKeyclo
 
 func (c *EntandoV1Client) EntandoPlugins(namespace string) EntandoPluginInterface {
 	return newEntandoPlugins(c, namespace)
+}
+
+func (c *EntandoV1Client) ProvidedCapabilities(namespace string) ProvidedCapabilityInterface {
+	return newProvidedCapabilities(c, namespace)
 }
 
 // NewForConfig creates a new EntandoV1Client for the given config.

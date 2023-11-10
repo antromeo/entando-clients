@@ -35,6 +35,16 @@ func addKnownTypes(scheme *runtime.Scheme) error {
 		&EntandoAppList{},
 		&EntandoDeBundle{},
 		&EntandoDeBundleList{},
+		&EntandoPlugin{},
+		&EntandoPluginList{},
+		&EntandoAppPluginLink{},
+		&EntandoAppPluginLinkList{},
+		&EntandoDatabaseService{},
+		&EntandoDatabaseServiceList{},
+		&EntandoKeycloakServer{},
+		&EntandoKeycloakServerList{},
+		&ProvidedCapability{},
+		&ProvidedCapabilityList{},
 	)
 	metav1.AddToGroupVersion(scheme, SchemeGroupVersion)
 	return nil

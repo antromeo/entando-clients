@@ -71,14 +71,24 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 		return &entandoorgv1.EntandoPluginSpecApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("EntandoPluginStatus"):
 		return &entandoorgv1.EntandoPluginStatusApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("ExternallyProvidedServiceSpec"):
+		return &entandoorgv1.ExternallyProvidedServiceSpecApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("KeycloakSpec"):
 		return &entandoorgv1.KeycloakSpecApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("Permission"):
 		return &entandoorgv1.PermissionApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("ProvidedCapability"):
+		return &entandoorgv1.ProvidedCapabilityApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("ProvidedCapabilitySpec"):
+		return &entandoorgv1.ProvidedCapabilitySpecApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("ProvidedCapabilityStatus"):
+		return &entandoorgv1.ProvidedCapabilityStatusApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("ResourceRequirement"):
 		return &entandoorgv1.ResourceRequirementApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("Role"):
 		return &entandoorgv1.RoleApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("SpecifiedCapabilitySpec"):
+		return &entandoorgv1.SpecifiedCapabilitySpecApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("TagsSpec"):
 		return &entandoorgv1.TagsSpecApplyConfiguration{}
 
